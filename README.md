@@ -281,44 +281,44 @@ class BaseApplication : Application(), BetaPatchListener {
 
 权限配置
 <pre><code>
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.READ_LOGS" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+&lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
+&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /&gt;
+&lt;uses-permission android:name="android.permission.READ_LOGS" /&gt;
+&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;
 </code></pre>
 Activity配置
 <pre><code>
-<activity
+&lt;activity
     android:name="com.tencent.bugly.beta.ui.BetaActivity"
     android:configChanges="keyboardHidden|orientation|screenSize|locale"
-    android:theme="@android:style/Theme.Translucent" />
+    android:theme="@android:style/Theme.Translucent" /&gt;
     </code></pre>
 配置FileProvider  
 <pre><code>
 //先在res目录新建xml文件夹，创建provider_paths.xml文件如下：
-<?xml version="1.0" encoding="utf-8"?>
-<paths>
-    <external-path
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;paths&gt;
+    &lt;external-path
         name="beta_external_path"
-        path="Download/" />
-    <external-path
+        path="Download/" /&gt;
+    &lt;external-path
         name="beta_external_files_path"
-        path="Android/data/" />
-</paths>
+        path="Android/data/" /&gt;
+&lt;/paths&gt;
 </code></pre>
 在AndroidManifest中配置FileProvider：
 <pre><code>
-<provider
+&lt;provider
     android:name="android.support.v4.content.FileProvider"
     android:authorities="${applicationId}.fileProvider"
     android:exported="false"
-    android:grantUriPermissions="true">
-    <meta-data
+    android:grantUriPermissions="true"&gt;
+    &lt;meta-data
         android:name="android.support.FILE_PROVIDER_PATHS"
-        android:resource="@xml/provider_paths"/>
-</provider>
+        android:resource="@xml/provider_paths"/&gt;
+&lt;/provider&gt;
 </code></pre>
 ## 六、混淆配置：
 <pre><code>
