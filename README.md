@@ -355,11 +355,11 @@ class CrashActivity : AppCompatActivity() {
 
 或者运行命令：
 
- ![运行命令]( image/6.jpeg)
+ ![运行命令]( image/6.png)
 
 点击图示位置的assembleRelease，生成基准包，完成后在下图位置可以看到app_release.apk
 
- ![app_release]( image/7.jpeg)
+ ![app_release]( image/7.png)
 
 在手机联网状态下，安装此基准包，否则上传补丁包时会报错：“未匹配到可应用补丁包的App版本，请确认补丁包的基线版本是否配置正确”
 
@@ -381,15 +381,15 @@ class CrashActivity : AppCompatActivity() {
 </code></pre>
 生成补丁包：
 1.先将tinker-support.gradle中的baseApkDir修改为第七步生成的apk文件夹名
- ![apk文件夹]( image/8.jpeg)
+ ![apk文件夹]( image/8.png)
 
 2.再将tinkerId修改为base-path-1.2
 
- ![base-path-1.2]( image/9.jpeg)
+ ![base-path-1.2]( image/9.png)
 
 3.然后点击下图位置的buildTinkerPatchRelease生成补丁包
 
- ![补丁包]( image/10.jpeg)
+ ![补丁包]( image/10.png)
 
 这里注意路径不要找错了，是patch/release文件夹下的patch_signed_7zip.apk，而不是apk/tinkerPatch/release文件夹下的patch_signed_7zip.apk，如果上传apk文件夹下的补丁包，Bugly管理平台会报错：“上传失败！补丁文件缺失必需字段：Created-Time、Created-By、YaPatchType、VersionName、VersionCode、From、To，请检查补丁文件后重试！”
 
@@ -409,7 +409,7 @@ class CrashActivity : AppCompatActivity() {
  ![上传成功]( image/13.jpeg)
 
 然后等待热更新生效，生效时间大概十分钟
- ![生效]( image/14.jpeg)
+ ![生效]( image/14.png)
 
 
 
